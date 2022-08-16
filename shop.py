@@ -36,7 +36,21 @@ everything = input ( " Brilliant! is that everything ? \n")
 if everything == "yes":
     print ( "That will cost you £ " + str(total))
 else:
-    print (" What else can i get you ?")
+    selection2 = input (" What else can i get you ? \n " + menu + "\n")
+    amount2 = input ("\n How many " + selection2 + "'s would like?")
 
+
+absolutesure = input ("Are you absolutely sure now ?, so it's a \n" + selection + " and a " + selection2 + " \n")
+
+total2 = price * int(amount2) 
+
+endtotal = int(total) + int(total2)
+
+
+if absolutesure == "yes":
+    print ( "That will cost you £ " + str(endtotal))
+else:
+    print (" GET OUT OF MY SHOP ")
+    exit()
 
 
