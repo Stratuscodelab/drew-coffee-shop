@@ -1,44 +1,68 @@
-#This is a simple Coffeeshop script a bit of a demo #
+#
+###############################################################
+#  ____                           ____       __  __           #
+#|  _ \ _ __ _____      _____   / ___|___  / _|/ _| ___  ___  #
+#| | | | '__/ _ \ \ /\ / / __| | |   / _ \| |_| |_ / _ \/ _ \ #
+#| |_| | | |  __/\ V  V /\__ \ | |__| (_) |  _|  _|  __/  __/ #
+#|____/|_|  \___| \_/\_/ |___/  \____\___/|_| |_|  \___|\___| #
+#                stratuslabs@outlook.com                      #
+###############################################################
+
+
+
+#importing and headder text
 import pyfiglet
-from word2number import w2n
 ascii_banner = pyfiglet.figlet_format("Drews Coffee")
 print(ascii_banner)
-
 print ("Hi Welcome to Drews Coffee ! ")
+
+menu = " Americano, Latte, Cappucino, Iced Frappuccino"
+
+# Start of the coffee Shop script
+
 name = input ("Can i take your name please \n \n")
-menu = " Americano, Latte, Cappucino, "
-price = 8
 
 #Adding the coffee shop bouncer, nobody allowed called Ben#
-
+#Nested If statements below
 if name == "Ben":
-    print (" BANNED .. NOT ALLOWED")
-    exit()
-else:
-    print ( "Hi " + name + " Check out our Menu \n \n" + menu )
+    evil_status = input (" Are you Evil Ben ? \n")
+    if evil_status == "yes":
+        print (" You are BANNED please leave the Shop.")
+        exit()
+    else:
+        print ( "Hi " + name + " Come on in ! \n")
 
+#User input is not case sensitive due to the .lower()
 
-selection = input ("\n What can i get you ?")
+print ( "Hi " + name + " Check out our Menu \n" + menu )
+selection = input ("What can i get you ? \n")
 
-print ("Great choice! " + selection )
+if selection.lower() == "Americano".lower():
+    price = 1
+elif selection.lower() == "Latte".lower():
+    price = 4
+elif selection.lower() == "Cappucino".lower():
+    price = 3
+elif selection.lower() == "Iced Frappuccino".lower():
+    price = 5
 
 amount = input( "\n How many " + selection + "'s would you like ? ")
-
+print ("Great choice! " + selection )
 
 total = price * int(amount)
 
-
 # can do it like this too and reference the absolute - absolutetotal = str(total)
-
 
 everything = input ( " Brilliant! is that everything ? \n")
 
 if everything == "yes":
     print ( "That will cost you £ " + str(total))
+    exit()
 else:
     selection2 = input (" What else can i get you ? \n " + menu + "\n")
     amount2 = input ("\n How many " + selection2 + "'s would like?")
 
+#Calculation of additonal orders 
 
 absolutesure = input ("Are you absolutely sure now ?, so it's a \n" + selection + " and a " + selection2 + " \n")
 
@@ -48,7 +72,7 @@ endtotal = int(total) + int(total2)
 
 
 if absolutesure == "yes":
-    print ( "That will cost you £ " + str(endtotal))
+    print ( "That will cost you £ " + str(endtotal) + " Thank You " + name)
 else:
     print (" GET OUT OF MY SHOP ")
     exit()
