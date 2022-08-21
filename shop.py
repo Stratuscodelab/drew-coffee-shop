@@ -26,9 +26,9 @@ name = input ("Can i take your name please \n \n")
 # First use of operators shown as "or" "and" including greater than / less than integer values #
 #Nested If statements below
 
-if name == "Joker" or "Penguin" or "Loki":
+if name == "Joker".lower() or name == "Penguin".lower() or name == "Loki".lower():
     evil_status = input (" Are you Evil " +name + "?" + "\n")
-    deeds = int(input("how many good deeds have you done today ? \n"))
+    deeds = int(input("How many good deeds have you done today ? \n"))
     if evil_status == "yes" and deeds < 4:
         print (" You are BANNED please leave the Shop.")
         exit()
@@ -37,7 +37,7 @@ if name == "Joker" or "Penguin" or "Loki":
 
 #User input is not case sensitive due to the .lower()
 
-print ( "Hi " + name + " Check out our Menu \n" + menu )
+print ( "\n Hi " + name + " Check out our Menu \n" + menu + "\n" )
 selection = input ("What can i get you ? \n")
 
 if selection.lower() == "Americano".lower():
@@ -50,9 +50,9 @@ elif selection.lower() == "Iced Frappuccino".lower():
     price = 5
 else:
     selection = input ("We dont have that here sorry!, Choose off this Menu please \n" + menu + "\n")
+    price = 0
 
-
-amount = input( "\n How many " + selection + "'s would you like ? ")
+amount = input( "How many " + selection + "'s would you like ? \n")
 print ("Great choice! " + selection )
 
 total = price * int(amount)
