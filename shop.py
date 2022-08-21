@@ -22,11 +22,14 @@ menu = " Americano, Latte, Cappucino, Iced Frappuccino"
 
 name = input ("Can i take your name please \n \n")
 
-#Adding the coffee shop bouncer, nobody allowed called Ben#
+#Adding the coffee shop bouncer, nobody allowed called Joker Penguin or Loki allowed in the shop
+# First use of operators shown as "or" "and" including greater than / less than integer values #
 #Nested If statements below
-if name == "Ben":
-    evil_status = input (" Are you Evil Ben ? \n")
-    if evil_status == "yes":
+
+if name == "Joker" or "Penguin" or "Loki":
+    evil_status = input (" Are you Evil " +name + "?" + "\n")
+    deeds = int(input("how many good deeds have you done today ? \n"))
+    if evil_status == "yes" and deeds < 4:
         print (" You are BANNED please leave the Shop.")
         exit()
     else:
@@ -45,6 +48,9 @@ elif selection.lower() == "Cappucino".lower():
     price = 3
 elif selection.lower() == "Iced Frappuccino".lower():
     price = 5
+else:
+    selection = input ("We dont have that here sorry!, Choose off this Menu please \n" + menu + "\n")
+
 
 amount = input( "\n How many " + selection + "'s would you like ? ")
 print ("Great choice! " + selection )
