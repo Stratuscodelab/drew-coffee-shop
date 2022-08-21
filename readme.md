@@ -25,4 +25,4 @@ Discovering different methods of programing, this script demonstrates the follow
 
 To run this script download to your PC and run within your python environment.
 
-This Coffee Shop script will be updated with further python examples to demonstrate ability to write and understand
+This Coffee Shop script will be updated with further python examples to demonstrate ability to write and understand Python.
