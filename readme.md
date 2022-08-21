@@ -19,6 +19,10 @@ Discovering different methods of programing, this script demonstrates the follow
 
 - Variables - Plenty used on pretty much every line.
 
+- Operators, "and" "or" used for asking if the customer is evil "and" done good deeds, the "OR" is used in the extra names for banned list. Both used together will decide if the band user can enter the shop.
+
+* Import module - Imported pYfiglet for ASCII logo.
+
 To run this script download to your PC and run within your python environment.
 
 This Coffee Shop script will be updated with further python examples to demonstrate ability to write and understand
